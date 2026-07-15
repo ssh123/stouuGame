@@ -91,6 +91,7 @@
 	}(g,glist,HUHUSdk.getRandomData(cates[Object.keys(cates)[0]].length, 2), cates[Object.keys(cates)[0]], Object.keys(cates)[0]);
 	const f = document.getElementsByClassName("second");
 	const k = document.getElementsByClassName("second-game-list");
+	const homePanelGameCount = window.innerWidth >= 1200 ? 8 : 6;
 	var E = 0;
 	for (let e = 1; e < f.length + 1; e++) {
 		var key = Object.keys(cates)[e];
@@ -104,8 +105,8 @@
 		c.innerText = "More";
 		f[E].appendChild(b),
 		f[E].appendChild(c);
-		if(cates[key].length >= 6) {
-			I(k[E], HUHUSdk.getRandomData(cates[key].length, 6), cates[key])
+		if(cates[key].length >= homePanelGameCount) {
+			I(k[E], HUHUSdk.getRandomData(cates[key].length, homePanelGameCount), cates[key])
 		} else {
 			I(k[E], HUHUSdk.getRandomData(cates[key].length, 3), cates[key])
 		}
