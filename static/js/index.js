@@ -52,6 +52,7 @@
 	}
 	var g = document.getElementById("first");
 	var glist = document.getElementById("first-game-list");
+	const featuredPanelGameCount = window.innerWidth >= 1200 ? 4 : window.innerWidth >= 768 ? 3 : 2;
 	!function(e,l, t, n, catKey) {
 		var b = document.createElement("label");
 		b.innerText = catKey + " Games";
@@ -88,7 +89,7 @@
 			s.appendChild(v),
 			l.appendChild(s)
 		}
-	}(g,glist,HUHUSdk.getRandomData(cates[Object.keys(cates)[0]].length, 2), cates[Object.keys(cates)[0]], Object.keys(cates)[0]);
+	}(g,glist,HUHUSdk.getRandomData(cates[Object.keys(cates)[0]].length, featuredPanelGameCount), cates[Object.keys(cates)[0]], Object.keys(cates)[0]);
 	const f = document.getElementsByClassName("second");
 	const k = document.getElementsByClassName("second-game-list");
 	const homePanelGameCount = window.innerWidth >= 1200 ? 8 : 6;
